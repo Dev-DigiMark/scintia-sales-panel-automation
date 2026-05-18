@@ -1,0 +1,26 @@
+{
+  "name": "scintia-sales-panel-automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dev-DigiMark/scintia-sales-panel-automation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Dev-DigiMark/scintia-sales-panel-automation/issues"
+  },
+  "homepage": "https://github.com/Dev-DigiMark/scintia-sales-panel-automation#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.8.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  }
+}
