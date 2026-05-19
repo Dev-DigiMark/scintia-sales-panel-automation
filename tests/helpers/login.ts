@@ -27,7 +27,11 @@ export async function login(page: Page, credentials?: Credentials): Promise<void
   await page.getByRole('textbox', { name: 'Entrez l\'e-mail' }).fill(creds.email);
   await page.getByRole('textbox', { name: 'Entrez le mot de passe' }).click();
   await page.getByRole('textbox', { name: 'Entrez le mot de passe' }).fill(creds.password);
-  await page.getByText('Responsable commercial').click();
+  if(process.env.ROLE === "mgr"){
+    await page.getByRole('radio', { name: 'Responsable commercial', exact: true }).click();
+  }else{
+    await page.getByRole('radio', { name: 'Commercial', exact: true }).click();
+  }
   await page.getByRole('button', { name: 'Se connecter' }).click();
 
   await page.waitForLoadState('networkidle');
