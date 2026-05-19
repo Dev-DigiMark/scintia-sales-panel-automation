@@ -1,0 +1,9 @@
+{
+  "teamMember": {
+    "firstName": "zeeshan",
+    "lastName": "zulfiqar",
+    "email": "zeeshan.zulfiqar2@gmail.com",
+    "password": "admin@123",
+    "confirmPassword": "admin@123"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "client": {
+    "companyName": "Digimarktest1234",
+    "sector": "food",
+    "addressSearch": "add",
+    "addressSelection": "Rue Addi Bâ",
+    "siret": "12345678900000",
+    "clientName": "1",
+    "phone": "251236524",
+    "email": "test12345@gmail.com"
+  },
+  "contract": {
+    "agentNames": "zeeshantest",
+    "baseTariff": "100",
+    "couponDiscount": "1",
+    "expectedFinalPrice": "99,00€",
+    "internalComment": "test comment"
+  },
+  "expectedResults": {
+    "finalPriceDisplay": "99,00€",
+    "priceBreakdown": "Base: 100,00 € - Remise: 1,00 € = 99,00 €",
+    "agentCount": "1",
+    "redirectUrl": "my-files"
+  }
+}
