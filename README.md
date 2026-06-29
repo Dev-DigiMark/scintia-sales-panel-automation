@@ -49,4 +49,9 @@ npx playwright test --headed --project=chromium
 npx playwright test --headed --project=chromium --reporter=html
 ```
 
+## Auth state setup
+```
+ npm run auth:save
+ npm run codegen -- https://your-app-url
 
+```
