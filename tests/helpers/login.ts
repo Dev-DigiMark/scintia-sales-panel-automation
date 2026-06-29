@@ -50,3 +50,10 @@ export async function login(page: Page, credentials?: Credentials): Promise<void
   expect(title).toContain('Sales Panel - Scintia Callflow');
 
 }
+
+export async function openAuthenticatedApp(page: Page): Promise<void> {
+  await page.goto(process.env.BASE_URL || '');
+  await page.waitForLoadState('networkidle');
+  await page.waitForURL('**/dashboard');
+  await expect(page).toHaveTitle(/Sales Panel - Scintia Callflow/);
+}

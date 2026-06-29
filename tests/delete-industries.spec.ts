@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test';
-import { login } from './helpers/login';
+import { openAuthenticatedApp } from './helpers/login';
 import testData from './test-data/delete-industries-data.json';
 
 
@@ -7,7 +7,7 @@ test('test delete-industries', async ({ page }) => {
   const { industries } = testData;
 
   // Step 1: Login and navigate to Paramètres
-  await login(page);
+  await openAuthenticatedApp(page);
   await page.getByRole('link', { name: 'Paramètres' }).click();
   await page.waitForLoadState('networkidle');
 

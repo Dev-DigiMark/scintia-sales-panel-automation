@@ -1,12 +1,12 @@
 import { expect, test } from '@playwright/test';
-import { login } from './helpers/login';
+import { openAuthenticatedApp } from './helpers/login';
 import testData from './test-data/team-member-data.json';
 
 test('test add-new-team-member', async ({ page }) => {
     const { teamMember } = testData;
 
     // Step 1: Login
-    await login(page);
+    await openAuthenticatedApp(page);
     await expect(page.getByRole('link', { name: 'Équipe' })).toBeVisible();
 
     // Step 2: Navigate to Équipe page

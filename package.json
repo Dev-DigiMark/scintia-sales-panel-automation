@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "auth:save": "playwright test --project=setup",
+    "codegen": "playwright codegen --load-storage=playwright/.auth/user.json"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Dev-DigiMark/scintia-sales-panel-automation.git"

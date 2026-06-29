@@ -1,11 +1,11 @@
 import { test, expect } from '@playwright/test';
-import { login } from './helpers/login';
+import { openAuthenticatedApp } from './helpers/login';
 import testData from './test-data/create-new-closing-data.json';
 
 test('test create-new-closing', async ({ page }) => {
   const { client, contract, expectedResults } = testData;
 
-  await login(page);
+  await openAuthenticatedApp(page);
 
   await page.waitForTimeout(1000);
   await page.getByRole('link', { name: 'Nouveau client' }).click();

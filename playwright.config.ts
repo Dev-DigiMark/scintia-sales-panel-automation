@@ -6,6 +6,7 @@ import { defineConfig, devices } from '@playwright/test';
  */
 import dotenv from 'dotenv';
 import path from 'path';
+import { AUTH_STATE_PATH } from './tests/helpers/auth-state';
 dotenv.config({ path: path.resolve(__dirname, '.env') });
 
 /**
@@ -48,8 +49,16 @@ export default defineConfig({
   /* Configure projects for major browsers */
   projects: [
     {
+      name: 'setup',
+      testMatch: /auth\.setup\.ts/,
+    },
+    {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      dependencies: ['setup'],
+      use: {
+        ...devices['Desktop Chrome'],
+        storageState: AUTH_STATE_PATH,
+      },
     },
 
     // {
