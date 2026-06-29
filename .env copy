@@ -1,0 +1,9 @@
+
+# Test user credentials
+USER_EMAIL=digimarkvercel@gmail.com
+USER_PASSWORD=string
+BASE_URL=https://dev-sales.scintiacallflow.ai/
+OTP_STRING=000000
+
+# Manager(mgr) / Sales Rep.(sales)
+ROLE = mgr 
